@@ -67,22 +67,22 @@ function KristiaUpdateData(data) {
 
 //------ Test jacket can receive from server
 // Pretend it's sending from Kristia
-let instructionNum = 0;
+// let instructionNum = 0;
 
-setInterval( function() {
-  sendInstruction();
-}, 1000);                            // sampling every 300 ms
+// setInterval( function() {
+//   sendInstruction();
+// }, 1000);                            // sampling every 300 ms
 
-function sendInstruction() {
+// function sendInstruction() {
   
-  if (instructionNum == 0) {
-    KristiaUpdateData('00000000S');
-    instructionNum = 1;
-  } else { 
-    KristiaUpdateData('00010000S');
-    instructionNum = 0;
-  }
-}
+//   if (instructionNum == 0) {
+//     KristiaUpdateData('00000000S');
+//     instructionNum = 1;
+//   } else { 
+//     KristiaUpdateData('00010000S');
+//     instructionNum = 0;
+//   }
+// }
 
 
 
