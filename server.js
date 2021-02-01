@@ -100,17 +100,24 @@ io.sockets.on('connection',
     //----------> Manage messages from jacket
     socket.on('jacketSendingChloe',
     function(data) {
-      console.log("Chloe is sending: " + data);
+      //console.log("Chloe is sending: " + data);
       chloeUpdateData(data);
       }
     );
 
     socket.on('jacketSendingKristia',
-        function(data) {
-          console.log("Kristia is sending: " + data);
-          KristiaUpdateData(data);
-          }
-        );
+      function(data) {
+        //console.log("Kristia is sending: " + data);
+        KristiaUpdateData(data);
+        }
+    );
+
+    socket.on('jacketSendingCue',
+      function(data) {
+        sockets.emit('jacketInstructions', data);
+        }
+    );
+
 
 
     //----------
