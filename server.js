@@ -64,6 +64,11 @@ function KristiaUpdateData(data) {
   io.sockets.emit('jacketInstructions', instructions);
 }
 
+function updateBoth(data) {
+  instructions = data;
+  io.sockets.emit('jacketInstructions', instructions);
+}
+
 
 //------ Test jacket can receive from server
 // Pretend it's sending from Kristia
@@ -114,7 +119,7 @@ io.sockets.on('connection',
 
     socket.on('jacketSendingCue',
       function(data) {
-        sockets.emit('jacketInstructions', data);
+        updateBoth(data);
         }
     );
 
