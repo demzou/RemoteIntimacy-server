@@ -126,6 +126,7 @@ io.sockets.on('connection',
     socket.on('sendTouchStatus',
     function(data) {
       socket.broadcast.emit('touchActivation', data);
+      console.log(data);
       }
   );
 
